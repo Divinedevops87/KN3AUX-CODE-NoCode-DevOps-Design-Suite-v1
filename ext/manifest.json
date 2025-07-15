@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "🌌 NoCode DevOps + Design Suite b.v1.0",
-  "description": "🌑 Dark Mode, Emoji-Packed, TypeScript Chromium Extension 🛠️🎨",
+  "name": "🏛️ Louisiana Government Resource Discovery",
+  "description": "🌟 Find Louisiana government resources, benefits, and services with AI-powered assistance",
   "version": "1.0.0",
   "icons": {
     "128": "assets/icons/icon-128.png",
@@ -12,7 +12,9 @@
     "tabs",
     "notifications",
     "storage",
-    "scripting"
+    "scripting",
+    "geolocation",
+    "activeTab"
   ],
   "background": {
     "service_worker": "background.js"
@@ -31,6 +33,12 @@
     }
   ],
   "author": "Krisshatta Nicole Esclovon™",
-  "homepage_url": "https://github.com/Divinedevops87/NoCodeDevOpsDesignSuite-bv1.0",
-  "offline_enabled": true
+  "homepage_url": "https://github.com/Divinedevops87/KN3AUX-CODE-NoCode-DevOps-Design-Suite-v1",
+  "offline_enabled": true,
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

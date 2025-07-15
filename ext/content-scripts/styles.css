@@ -1,22 +1,348 @@
-/* styles.css – Dark style for injected banner 🌒 */
+/* Louisiana Government Resource Discovery App - Content Script Styles */
 
-.injected-banner {
+/* Main banner styles */
+.gov-resource-banner {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
-  background-color: rgba(30, 30, 30, 0.90);
-  color: #bb86fc; /* purple accent */
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.9rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+  color: white;
+  border-radius: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+  max-width: 350px;
+  animation: slideInUp 0.5s ease-out;
 }
 
-.injected-banner img {
-  width: 20px;
-  margin-right: 6px;
+.banner-content {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  position: relative;
+}
+
+.banner-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.banner-text {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.banner-text strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #ffd700;
+}
+
+.banner-text p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.8rem;
+}
+
+.banner-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.banner-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Quick helper panel */
+.gov-helper-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  border-radius: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 999998;
+  min-width: 200px;
+  animation: slideInDown 0.5s ease-out;
+}
+
+.helper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.helper-header h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.panel-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helper-content {
+  padding: 8px;
+}
+
+.helper-btn {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.helper-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.helper-btn:last-child {
+  margin-bottom: 0;
+}
+
+/* Form highlighting */
+.gov-helper-highlight {
+  position: relative;
+  outline: 2px solid #ffd700 !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3) !important;
+}
+
+.gov-helper-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #1f2937;
+  color: #ffd700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gov-helper-highlight:hover .gov-helper-tooltip {
+  opacity: 1;
+}
+
+/* Eligibility helpers */
+.eligibility-helper {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.helper-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  font-size: 12px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  cursor: help;
+  vertical-align: middle;
+}
+
+/* Translation overlay */
+.translation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.translation-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.translation-modal h3 {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.translation-modal p {
+  margin: 0 0 16px 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.lang-btn {
+  display: block;
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: #2563eb;
+}
+
+.close-modal {
+  background: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Form simplification helpers */
+.simple-help {
+  font-weight: normal !important;
+}
+
+/* Notifications */
+.gov-helper-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 9999999;
+  animation: popIn 0.3s ease-out;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gov-resource-banner {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .gov-helper-panel {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .banner-content {
+    padding: 10px 12px;
+  }
+  
+  .banner-text {
+    font-size: 0.8rem;
+  }
+  
+  .banner-text strong {
+    font-size: 0.85rem;
+  }
 }

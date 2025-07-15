@@ -3,6 +3,12 @@ node_modules/
 
 # Build outputs
 ext/dist/
+dist/
+
+# Development files
+preview.html
+test-app.sh
+README_BACKUP.md
 
 # Logs
 npm-debug.log*
