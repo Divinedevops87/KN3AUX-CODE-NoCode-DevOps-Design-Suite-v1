@@ -1,0 +1,15 @@
+{
+  "name": "KN3AUX-CODE\u2122 Suite",
+  "short_name": "KN3AUX",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "KN3AUX-CODE\u2122 NoCode DevOps + Design Suite v1",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

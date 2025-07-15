@@ -1,0 +1,30 @@
+{
+  "name": "louisiana-government-resource-discovery-app",
+  "version": "1.0.0",
+  "description": "🏛️ Louisiana Government Resource Discovery App - AI-Powered assistance for finding government benefits and services",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cp ext/manifest.json dist/manifest.json && cp ext/popup/*.html dist/popup/ && cp ext/popup/*.css dist/popup/ && cp ext/content-scripts/*.css dist/content-scripts/ && cp -R assets dist/assets",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "deploy": "npm run build",
+    "test": "echo \"Tests will be implemented in Phase 3\" && exit 0"
+  },
+  "keywords": [
+    "government",
+    "resources",
+    "benefits",
+    "louisiana",
+    "chrome-extension",
+    "typescript",
+    "pwa",
+    "multilingual",
+    "accessibility"
+  ],
+  "author": "Krisshatta Nicole Esclovon™ (Divinedevops87)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.1.0",
+    "typescript": "^4.9.5"
+  }
+}

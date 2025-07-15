@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "🏛️ Louisiana Government Resource Discovery",
+  "description": "🌟 Find Louisiana government resources, benefits, and services with AI-powered assistance",
+  "version": "1.0.0",
+  "icons": {
+    "128": "assets/icons/icon-128.png",
+    "256": "assets/icons/icon-256.png",
+    "512": "assets/icons/icon-512.png"
+  },
+  "permissions": [
+    "tabs",
+    "notifications",
+    "storage",
+    "scripting",
+    "geolocation",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "128": "assets/icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-scripts/content.js"],
+      "css": ["content-scripts/styles.css"]
+    }
+  ],
+  "author": "Krisshatta Nicole Esclovon™",
+  "homepage_url": "https://github.com/Divinedevops87/KN3AUX-CODE-NoCode-DevOps-Design-Suite-v1",
+  "offline_enabled": true,
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
