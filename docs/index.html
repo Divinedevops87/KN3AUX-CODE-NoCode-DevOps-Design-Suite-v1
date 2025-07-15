@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌌 NoCode DevOps + Design Suite Docs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="../assets/logo/kn3aux-logo-final.png" alt="NoCode Logo" class="site-logo">
+    <h1>🌌 NoCode DevOps + Design Suite b.v1.0</h1>
+    <p>DevOps + Design Suite in Dark Mode 🛠️🎨</p>
+  </header>
+  <main>
+    <section>
+      <h2>📥 Installation & Usage</h2>
+      <ol>
+        <li>Clone or download ZIP:<br>
+          <code>git clone https://github.com/Divinedevops87/NoCodeDevOpsDesignSuite-bv1.0.git</code>
+        </li>
+        <li>Install deps & build:<br>
+          <code>npm ci && npm run build</code>
+        </li>
+        <li>Load extension in your browser:<br>
+          • Go to <code>chrome://extensions</code> (or <code>edge://extensions</code>)<br>
+          • Toggle Developer Mode on<br>
+          • Click “Load unpacked” and select the <code>dist</code> folder
+        </li>
+        <li>Click the NoCode DevOps icon & let the dark-mode magic begin! ✨</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>📜 Features</h2>
+      <ul>
+        <li>🌑 Full Dark-Mode UI with Emojis</li>
+        <li>🖥️ One-click Termux Server Launch</li>
+        <li>⚙️ Run DevOps & CI/CD Scripts</li>
+        <li>🌈 Translucent Rainbow-Glow Logo</li>
+        <li>📱 Mobile-Ready Popup & Responsive</li>
+        <li>💾 Offline Enabled: All assets bundled</li>
+        <li>🧩 TypeScript + CSS + HTML for type safety</li>
+        <li>📢 Automatic page-injection banner</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📂 Repository Structure</h2>
+      <pre>
+NoCodeDevOpsDesignSuite-bv1.0/
+├── .github/                          
+│   └── workflows/                         
+│       └── build-and-deploy.yml        
+├── assets/                          
+│   ├── icons/                       
+│   ├── logo/                        
+│   └── social/                      
+├── docs/                           
+│   ├── index.html                  
+│   └── styles.css                  
+├── ext/                            
+│   ├── manifest.json               
+│   ├── background.ts               
+│   ├── popup/                      
+│   │   ├── popup.html              
+│   │   ├── popup.ts                
+│   │   └── popup.css               
+│   └── content-scripts/            
+│       ├── content.ts              
+│       └── styles.css              
+├── tsconfig.json                   
+├── package.json                    
+├── README.md                       
+├── LICENSE                         
+└── .gitignore                      
+      </pre>
+    </section>
+
+    <section>
+      <h2>💻 Development</h2>
+      <p>
+        1. Install Node.js & npm (v16+).<br>
+        2. Run <code>npm ci</code> to install dependencies.<br>
+        3. Run <code>npm run build</code> to compile TS → JS.<br>
+        4. Load the <code>dist</code> folder as an unpacked extension.  
+      </p>
+      <p>Tip: Use <code>npm run watch</code> for automatic rebuilds while editing TS. 🔄</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Krisshatta Nicole Esclovon™ • KN3AUX-CODE™ SIEL •  
+      <a href="https://github.com/Divinedevops87">GitHub / Divinedevops87</a>
+    </p>
+  </footer>
+</body>
+</html>

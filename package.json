@@ -1,0 +1,17 @@
+{
+  "name": "NoCodeDevOpsDesignSuite-bv1.0",
+  "version": "1.0.0",
+  "description": "🌌 NoCode DevOps + Design Suite b.v1.0 ✨ (Dark Mode, Emoji-Packed, TypeScript)",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cp ext/manifest.json dist/manifest.json && cp -R ext/popup dist/popup && cp -R ext/content-scripts dist/content-scripts",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "deploy": "npm run build"
+  },
+  "author": "Krisshatta Nicole Esclovon™ (Divinedevops87)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

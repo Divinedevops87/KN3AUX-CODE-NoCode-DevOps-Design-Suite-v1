@@ -1,0 +1,75 @@
+/* styles.css – Dark mode for docs 🌑📝 */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+}
+
+.site-logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+h1 {
+  margin: 0;
+  color: #bb86fc; /* purple accent */
+}
+
+p {
+  color: #aaaaaa;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #03dac6; /* teal accent */
+}
+
+pre {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+code {
+  background: #272727;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #cf6679; /* pink accent */
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+a {
+  color: #03dac6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #888888;
+}

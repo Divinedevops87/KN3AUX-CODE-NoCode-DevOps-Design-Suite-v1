@@ -1,0 +1,22 @@
+/* styles.css – Dark style for injected banner 🌒 */
+
+.injected-banner {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(30, 30, 30, 0.90);
+  color: #bb86fc; /* purple accent */
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+.injected-banner img {
+  width: 20px;
+  margin-right: 6px;
+}

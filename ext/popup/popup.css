@@ -1,0 +1,58 @@
+/* popup.css – Dark Mode + Emoji Style 🎨🖤 */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 280px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  color: #bb86fc; /* purple accent */
+}
+
+button {
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+button:active {
+  background-color: #555555;
+}
+
+.footer {
+  font-size: 0.7rem;
+  margin-top: 12px;
+  color: #888888;
+}
